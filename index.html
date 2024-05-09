@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(23, 92, 92);
+
+    }
+    #Cat{
+        border: 20px double orange;
+        margin-left: 10px;
+    }
+    button{
+        background-color: green;
+        color: rgb(241, 237, 6);
+        width: 120px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 0 0 20px white;
+        margin-left: 50px;
+        cursor: pointer;
+        margin-top: 50px;border-radius: 15px;
+        border: 5px inset orange;
+    }
+    @media (max-width:420px) {
+        img{
+            width: 285px;
+            height: 400px;
+            margin-left: 0px;
+        }
+        button{
+        background-color: green;
+        color: rgb(240, 237, 81);
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        font-weight: bold;
+        text-shadow: 0 0 20px rgb(240, 231, 231);
+        margin-left: 45px;
+        cursor: pointer;
+        margin-top: 30px;
+        border-radius: 15px;
+    }
+    }
+</style>
+<body>
+       <button onclick="hideCat()">Hide Cat</button> 
+       <button onclick="switchCat()">switchCat</button>
+       <br>
+       <br>
+       <img id="Cat" width="330px" height="500px" src="https://i.ucrazy.ru/files/pics/2023.10/2023-10-17-21-53-072.webp" alt="">
+
+    <script>
+        let image = document.getElementById('Cat')
+
+        const hideCat = () => {
+            image.hidden ?
+            image.hidden=false :
+            image.hidden=true
+        }
+
+        const switchCat =()=>{
+            let link1="https://i.ucrazy.ru/files/pics/2023.10/2023-10-17-21-53-072.webp"
+            let link2="https://i.pinimg.com/736x/95/48/ff/9548ffa15f0c7a73bad229e49e21abc0.jpg"
+            
+            image.src === link1 ?
+            image.src = link2 :
+            image.src = link1
+        }    
+    </script>
+</body>
+</html>
